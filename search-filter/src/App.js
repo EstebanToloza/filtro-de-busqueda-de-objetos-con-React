@@ -5,168 +5,168 @@ function App() {
   const productsList = [
     {
       "id": 1,
-      "name": "cerulean",
+      "name": "Camisa",
       "model": 2000,
       "color": "#98B2D1",
       "stock": "15-4020"
     },
     {
       "id": 2,
-      "name": "fuchsia rose",
+      "name": "Pantalón",
       "model": 2001,
       "color": "#C74375",
       "stock": "17-2031"
     },
     {
       "id": 3,
-      "name": "true red",
+      "name": "Cartera",
       "model": 2002,
       "color": "#BF1932",
       "stock": "19-1664"
     },
     {
       "id": 4,
-      "name": "aqua sky",
+      "name": "Reloj",
       "model": 2003,
       "color": "#7BC4C4",
       "stock": "14-4811"
     },
     {
       "id": 5,
-      "name": "tigerlily",
+      "name": "Medias",
       "model": 2004,
       "color": "#E2583E",
       "stock": "17-1456"
     },
     {
       "id": 6,
-      "name": "blue turquoise",
+      "name": "Corbata",
       "model": 2005,
       "color": "#53B0AE",
       "stock": "15-5217"
     },
     {
       "id": 7,
-      "name": "sand dollar",
+      "name": "Short",
       "model": 2006,
       "color": "#DECDBE",
       "stock": "13-1106"
     },
     {
       "id": 8,
-      "name": "chili pepper",
+      "name": "Bufanda",
       "model": 2007,
       "color": "#9B1B30",
       "stock": "19-1557"
     },
     {
       "id": 9,
-      "name": "blue iris",
+      "name": "Almohada",
       "model": 2008,
       "color": "#5A5B9F",
       "stock": "18-3943"
     },
     {
       "id": 10,
-      "name": "mimosa",
+      "name": "Polera",
       "model": 2009,
       "color": "#F0C05A",
       "stock": "14-0848"
     },
     {
       "id": 11,
-      "name": "turquoise",
+      "name": "Saco",
       "model": 2010,
       "color": "#45B5AA",
       "stock": "15-5519"
     },
     {
       "id": 12,
-      "name": "honeysuckle",
+      "name": "Pañuelo",
       "model": 2011,
       "color": "#D94F70",
       "stock": "18-2120"
     },
     {
       "id": 13,
-      "name": "cerulean",
+      "name": "Camisa",
       "model": 2000,
       "color": "#98B2D1",
       "stock": "15-4020"
     },
     {
       "id": 14,
-      "name": "fuchsia rose",
+      "name": "Pantalón",
       "model": 2001,
       "color": "#C74375",
       "stock": "17-2031"
     },
     {
       "id": 15,
-      "name": "true red",
+      "name": "Cartera",
       "model": 2002,
       "color": "#BF1932",
       "stock": "19-1664"
     },
     {
       "id": 16,
-      "name": "aqua sky",
+      "name": "Reloj",
       "model": 2003,
       "color": "#7BC4C4",
       "stock": "14-4811"
     },
     {
       "id": 17,
-      "name": "tigerlily",
+      "name": "Medias",
       "model": 2004,
       "color": "#E2583E",
       "stock": "17-1456"
     },
     {
       "id": 18,
-      "name": "blue turquoise",
+      "name": "Corbata",
       "model": 2005,
       "color": "#53B0AE",
       "stock": "15-5217"
     },
     {
       "id": 19,
-      "name": "sand dollar",
+      "name": "Short",
       "model": 2006,
       "color": "#DECDBE",
       "stock": "13-1106"
     },
     {
       "id": 20,
-      "name": "chili pepper",
+      "name": "Bufanda",
       "model": 2007,
       "color": "#9B1B30",
       "stock": "19-1557"
     },
     {
       "id": 21,
-      "name": "blue iris",
+      "name": "Almohada",
       "model": 2008,
       "color": "#5A5B9F",
       "stock": "18-3943"
     },
     {
       "id": 22,
-      "name": "mimosa",
+      "name": "Polera",
       "model": 2009,
       "color": "#F0C05A",
       "stock": "14-0848"
     },
     {
       "id": 23,
-      "name": "turquoise",
+      "name": "Saco",
       "model": 2010,
       "color": "#45B5AA",
       "stock": "15-5519"
     },
     {
       "id": 24,
-      "name": "honeysuckle",
+      "name": "Pañuelo",
       "model": 2011,
       "color": "#D94F70",
       "stock": "18-2120"
@@ -211,8 +211,8 @@ function App() {
         {data.map((item, i) => {
           return (
             <div className="box" key={i} style={{ backgroundColor: item.color }}>
-              <b>Name: </b>{item.name}<br/>
-              <b>Model: </b>{item.model}<br/>
+              <b>Nombre: </b>{item.name}<br/>
+              <b>Modelo: </b>{item.model}<br/>
               <b>Color: </b>{item.color}<br/>
               <b>Stock: </b>{item.stock}<br/>
             </div>)
