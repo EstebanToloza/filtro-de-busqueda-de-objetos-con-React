@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function App() {
 
   const dataList = [
@@ -171,20 +173,50 @@ function App() {
     }
   ];
 
+  const [searchText, setSearchText] = useState('');
+  const [data, setData] = useState(dataList)
+
+  const handleChange = value => {
+    setSearchText(value);
+    filterData(value);
+  }
+
+  const filterData = value => {
+    const lowerCaseValue = value.toLowerCase().trim();
+    if(!lowerCaseValue) {
+      setData(dataList);
+    } 
+    else {
+      const filteredData = dataList.filter(item => {
+        return Object.keys(item).some(key => {
+          return item[key].toString().toLowerCase().includes(lowerCaseValue);
+        })
+      });
+      setData(filteredData);
+    }
+  }
 
   return (
     <div className="App">
-      Buscar: <input />
+      Buscar: <input 
+        type="text"
+        placeholder="Buscar"
+        value={searchText}
+        onChange={e => handleChange(e.target.value)}
+      />
+
       <div className="container">
-        {dataList.map((item, i) => {
+        {data.map((item, i) => {
           return (
-            <div className="box" key={i}>
+            <div className="box" key={i} style={{ backgroundColor: item.color }}>
               <b>Name: </b>{item.name}<br/>
               <b>Year: </b>{item.year}<br/>
               <b>Color: </b>{item.color}<br/>
               <b>Pantone value: </b>{item.pantone_value}<br/>
             </div>)
         })}
+        <div className="clearBoth"></div>
+        {data.length === 0 && <span>Tarjeta inexistente!</span>}
       </div>
     </div>
   );
