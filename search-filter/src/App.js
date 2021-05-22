@@ -202,7 +202,7 @@ function App() {
     <div className="App">
       Buscar: <input 
         type="text"
-        placeholder="Buscar"
+        placeholder="Buscar por nombre..."
         value={searchText}
         onChange={e => handleChange(e.target.value)}
       />
