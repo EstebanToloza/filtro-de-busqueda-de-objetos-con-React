@@ -29,3 +29,7 @@ code {
 .clearBoth {
   clear: both;
 }
+
+input {
+  width: 200px;
+}

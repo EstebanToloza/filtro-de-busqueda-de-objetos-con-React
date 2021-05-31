@@ -176,7 +176,7 @@ function App() {
   const [searchText, setSearchText] = useState();
   const [data, setData] = useState(productsList)
 
-  const excludeProperties = ['id', 'model', 'color', 'stock']
+  const excludeProperties = ['id', 'color', 'stock']
 
   const handleChange = value => {
     setSearchText(value);
@@ -202,7 +202,7 @@ function App() {
     <div className="App">
       Buscar: <input 
         type="text"
-        placeholder="Buscar por nombre..."
+        placeholder="Buscar por nombre o modelo..."
         value={searchText}
         onChange={e => handleChange(e.target.value)}
       />
@@ -212,7 +212,7 @@ function App() {
           return (
             <div className="box" key={i} style={{ backgroundColor: item.color }}>
               <b>Nombre: </b>{item.name}<br/>
-              <b>Modelo: </b>{item.model}<br/>
+              <b>Modelo: </b>{item?.model || '###' }<br/> {/* Condicional utilizado en caso de que la data no venga desde el api o DB*/}
               <b>Color: </b>{item.color}<br/>
               <b>Stock: </b>{item.stock}<br/>
             </div>)
